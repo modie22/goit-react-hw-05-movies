@@ -55,7 +55,7 @@ const MovieDetails = () => {
                     <Link to="reviews">Reviews</Link>
                 </li>
             </AddListStyle>
-            <Suspense fallback={<div>Loading...</div>}>
+            <Suspense fallback={<Loader/>}>
                 <Outlet />
             </Suspense>
         </>
