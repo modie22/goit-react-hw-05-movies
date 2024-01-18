@@ -26,12 +26,15 @@ const Movies = () => {
     setLoading(true);
     fetchSearchMovies(endPoint, searchQuery)
       .then(data => {
+        if (!data.results.length) {
+          alert('No movies found!');
+        }
         setFilms(data.results);
       })
-      .catch(onFetchError)
+      .catch(onFetchError=>onFetchError)
       .finally(() => setLoading(false));
     
-  }, [films, searchQuery]);
+  }, [films.length, searchQuery]);
 
   const onSubmitSearchBar = (event) => {
     event.preventDefault();

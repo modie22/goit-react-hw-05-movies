@@ -1,4 +1,4 @@
-import { SearchForm, SearchFormButton, SearchFormInput, SearchbarStyle } from "./Search.staled";
+import { SearchForm, SearchFormButton, SearchFormInput, SearchbarStyle } from "./Search.styled";
 
 const Searchbar = ({ onSubmitSearchBar, value }) => (
     <SearchbarStyle>
