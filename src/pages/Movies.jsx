@@ -31,7 +31,7 @@ const Movies = () => {
         }
         setFilms(data.results);
       })
-      .catch(onFetchError=>onFetchError)
+      .catch(onFetchError)
       .finally(() => setLoading(false));
     
   }, [films.length, searchQuery]);
