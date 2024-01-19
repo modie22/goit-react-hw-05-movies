@@ -14,7 +14,7 @@ const Movies = () => {
   const [films, setFilms] = useState([]);
   const [searchParams, setSearchParams] = useSearchParams();
   const searchQuery = searchParams.get('query') ?? "";
-  
+
   useEffect(() => {
     if (searchQuery === '') {
       return;
@@ -22,7 +22,6 @@ const Movies = () => {
     if (films.length > 0) {
       return;
     };
-
     setLoading(true);
     fetchSearchMovies(endPoint, searchQuery)
       .then(data => {
@@ -60,7 +59,6 @@ const Movies = () => {
     setSearchParams({ query: searchValue });
     setFilms([]);
   };
-
   return <div>
     <Searchbar onSubmitSearchBar={onSubmitSearchBar} value={searchQuery} />
     <SectionStyle>

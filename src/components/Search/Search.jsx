@@ -1,6 +1,6 @@
 import { SearchForm, SearchFormButton, SearchFormInput, SearchbarStyle } from "./Search.styled";
 
-const Searchbar = ({ onSubmitSearchBar, value }) => (
+const Searchbar = ({ onSubmitSearchBar, value }) =>(
     <SearchbarStyle>
     <SearchForm onSubmit={onSubmitSearchBar}>
         <SearchFormButton>
