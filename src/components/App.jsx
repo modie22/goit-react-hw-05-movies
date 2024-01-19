@@ -1,6 +1,7 @@
 import { Routes, Route } from "react-router-dom";
 import { Layout } from "./Layout/Layout";
 import { lazy } from "react";
+import PageNotFound from "pages/PageNotFound";
 
 const Home = lazy(() => import("../pages/Home"));
 const MovieDetails = lazy(() => import("../pages/MovieDetails"));
@@ -18,7 +19,7 @@ export const App = () => (
         <Route path="cast" element={<Cast />} />
         <Route path="reviews" element={<Reviews />} />
       </Route>
-      <Route path="*" element={<Home />} />
+      <Route path="*" element={<PageNotFound />} />
     </Route>
   </Routes>
 );
